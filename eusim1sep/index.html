@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuSim Nivel 1 - SimAcademy</title>
+    <meta name="description" content="Curso EuSim Nivel 1 - Aprende a facilitar cursos de simulación clínica con instructores internacionales expertos.">
+    <meta property="og:title" content="EuSim Nivel 1 - SimAcademy">
+    <meta property="og:description" content="24-26 de septiembre 2026 en Centro Médico ABC Santa Fe. Curso de simulación clínica con certificación internacional.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde: #4CAF50;
+            --verde-claro: #66BB6A;
+            --morado: #7B3F9E;
+            --morado-oscuro: #5E2D7A;
+            --negro: #000000;
+            --gris-oscuro: #1a1a1a;
+            --blanco: #ffffff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--negro);
+            min-height: 100vh;
+            color: var(--blanco);
+            line-height: 1.6;
+        }
+        
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(123, 63, 158, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
+                var(--negro);
+        }
+        
+        .logo {
+            max-width: 200px;
+            width: 60%;
+            margin-bottom: 1.5rem;
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, var(--morado) 0%, var(--morado-oscuro) 100%);
+            color: var(--blanco);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--verde-claro) 0%, var(--verde) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .fecha-lugar {
+            font-size: 1.2rem;
+            color: var(--verde-claro);
+            margin-bottom: 1.5rem;
+        }
+        
+        .fecha-lugar strong {
+            color: var(--blanco);
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--blanco);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+        
+        .section {
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            color: var(--morado);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .contenidos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .contenido-item {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--verde);
+            font-size: 0.95rem;
+        }
+        
+        .precio-section {
+            background: var(--gris-oscuro);
+            text-align: center;
+        }
+        
+        .precio-card {
+            background: rgba(123, 63, 158, 0.2);
+            border: 1px solid var(--morado);
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 400px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .precio {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--verde-claro);
+        }
+        
+        .precio-nota {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+        
+        .testimonios {
+            background: var(--negro);
+        }
+        
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .testimonio {
+            background: rgba(255,255,255,0.03);
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.85;
+            border: 1px solid rgba(123, 63, 158, 0.2);
+        }
+        
+        .testimonio::before {
+            content: '🗣️';
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profesorado {
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta-final {
+            background: linear-gradient(135deg, rgba(123, 63, 158, 0.2) 0%, rgba(76, 175, 80, 0.1) 100%);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .cta-final h2 {
+            color: var(--blanco);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-final p {
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gris-oscuro);
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+        
+        footer a {
+            color: var(--verde-claro);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .fecha-lugar { font-size: 1rem; }
+            .description { font-size: 1rem; }
+            .precio { font-size: 2rem; }
+            .section { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <img src="../assets/logo.png" alt="SimAcademy Logo" class="logo">
+        
+        <span class="badge">Certificación Internacional</span>
+        
+        <h1>EuSim Nivel 1</h1>
+        
+        <p class="fecha-lugar">
+            📅 <strong>24-26 de septiembre 2026</strong><br>
+            📍 Centro Médico ABC Campus Santa Fe
+        </p>
+        
+        <p class="description">
+            Inicia tu camino como facilitador de simulación clínica. Aprende a diseñar, 
+            facilitar y hacer debriefing de escenarios con instructores expertos de 
+            centros de simulación de Dinamarca, Alemania y Reino Unido.
+        </p>
+        
+        <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20el%20curso%20EuSim%20Nivel%201" class="cta-button">
+            💬 Solicitar información
+        </a>
+    </section>
+    
+    <section class="section">
+        <h2>¿Qué aprenderás?</h2>
+        <div class="contenidos">
+            <div class="contenido-item">Familiarización con simuladores y ambiente simulado</div>
+            <div class="contenido-item">Diseño y facilitación de escenarios</div>
+            <div class="contenido-item">Técnicas de Debriefing estructurado</div>
+            <div class="contenido-item">Uso de video y sistemas de anotación</div>
+            <div class="contenido-item">Errores en Medicina y Seguridad del Paciente</div>
+            <div class="contenido-item">Principios de Aprendizaje en el adulto</div>
+            <div class="contenido-item">Diseño de Cursos de Simulación</div>
+            <div class="contenido-item">Roles del Instructor en Simulación</div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>Profesorado Internacional</h2>
+        <p class="profesorado">
+            Instructores experimentados de EuSim en centros de simulación en 
+            <strong>Copenhagen, Dinamarca (DIMS)</strong>, <strong>Tuebingen, Alemania (TuPASS)</strong>, 
+            <strong>Londres, Reino Unido (BARTS)</strong> y asociados internacionales.
+            <br><br>
+            Equipo multidisciplinario: médicos, psicólogos, educadores médicos y enfermeras expertos.
+        </p>
+    </section>
+    
+    <section class="section precio-section">
+        <h2>Inversión</h2>
+        <div class="precio-card">
+            <div class="precio">$32,500 MXN</div>
+            <p class="precio-nota">+ IVA (dentro de México)</p>
+            <p class="precio-nota">~$1,805 USD (fuera de México, sin IVA)</p>
+        </div>
+        <p style="opacity: 0.7; font-size: 0.9rem;">Descuento disponible por inscripción anticipada</p>
+    </section>
+    
+    <section class="section testimonios">
+        <h2>Lo que dicen nuestros egresados</h2>
+        <div class="testimonios-grid">
+            <div class="testimonio">
+                "Finalizo este curso con mis expectativas ampliamente superadas. La práctica guiada por expertos fue invaluable."
+            </div>
+            <div class="testimonio">
+                "Un curso muy dinámico, con un balance perfecto entre teoría y práctica. ¡El equipo es excelente!"
+            </div>
+            <div class="testimonio">
+                "El profesionalismo y la seguridad psicológica que se sintieron durante el curso marcaron una gran diferencia."
+            </div>
+            <div class="testimonio">
+                "Me encantó la estructura del curso, el ambiente cálido de los instructores y la retroalimentación constante."
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-final">
+        <h2>¿Listo para transformar tu forma de enseñar?</h2>
+        <p>Cupo limitado a 24 participantes</p>
+        <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20el%20curso%20EuSim%20Nivel%201" class="cta-button">
+            💬 Quiero inscribirme
+        </a>
+    </section>
+    
+    <footer>
+        <p>© 2026 SimAcademy · <a href="https://www.simacademy.lat">www.simacademy.lat</a></p>
+    </footer>
+
+    <script src="https://apps.clientify.net/widget-whatsapp2.0/app/assets/index-5yccDyx4.js?id=d2a8fb3d-8cd3-4135-b0b8-92db6c2dca79&path=https://plus.clientify.com"></script>
+</body>
+</html>
