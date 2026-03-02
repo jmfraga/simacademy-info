@@ -232,9 +232,56 @@
             .precio { font-size: 2rem; }
             .section { padding: 2rem 1.5rem; }
         }
+
+        /* ===== BANNER CURSO LLENO ===== */
+        .banner-lleno {
+            background: linear-gradient(135deg, #c0392b 0%, #922b21 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 1.2rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 20px rgba(192, 57, 43, 0.6);
+            animation: pulse-banner 2s ease-in-out infinite;
+        }
+        .banner-lleno .banner-sub {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-top: 0.2rem;
+        }
+        @keyframes pulse-banner {
+            0%, 100% { box-shadow: 0 4px 20px rgba(192, 57, 43, 0.6); }
+            50% { box-shadow: 0 4px 30px rgba(192, 57, 43, 0.9); }
+        }
+        .btn-disabled {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #444;
+            color: #888;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: not-allowed;
+            pointer-events: none;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+    <!-- BANNER CURSO LLENO -->
+    <div class="banner-lleno">
+        🔴 CURSO LLENO — No hay cupos disponibles
+        <span class="banner-sub">Regístrate en lista de espera para futuras ediciones</span>
+    </div>
+
     <section class="hero">
         <img src="../assets/logo.png" alt="SimAcademy Logo" class="logo">
         
@@ -253,9 +300,7 @@
             centros de simulación de Dinamarca, Alemania y Reino Unido.
         </p>
         
-        <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20el%20curso%20EuSim%20Nivel%201" class="cta-button">
-            💬 Solicitar información
-        </a>
+        <span class="btn-disabled">🔴 Curso LLENO</span>
     </section>
     
     <section class="section">
@@ -313,10 +358,8 @@
     
     <section class="cta-final">
         <h2>¿Listo para transformar tu forma de enseñar?</h2>
-        <p>Cupo limitado a 24 participantes</p>
-        <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20el%20curso%20EuSim%20Nivel%201" class="cta-button">
-            💬 Quiero inscribirme
-        </a>
+        <p style="color:#e74c3c; font-weight:700; font-size:1.1rem;">🔴 CUPOS AGOTADOS — Curso LLENO</p>
+        <span class="btn-disabled">🔴 Sin cupos disponibles</span>
     </section>
     
     <footer>
