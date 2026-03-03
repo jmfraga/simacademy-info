@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA en Ortopedia del Pie - SimAcademy Webinar</title>
+    <meta name="description" content="Webinar de Inteligencia Artificial aplicada a la Ortopedia del Pie. Evento exclusivo para el Colegio de Ortopedistas de Pie de México. 15 de junio 2026.">
+    <meta property="og:title" content="IA en Ortopedia del Pie - SimAcademy Webinar">
+    <meta property="og:description" content="Webinar exclusivo: Inteligencia Artificial aplicada a la Ortopedia del Pie. 15 de junio 2026.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul: #1565C0;
+            --azul-claro: #42A5F5;
+            --azul-oscuro: #0D47A1;
+            --teal: #00838F;
+            --teal-claro: #26C6DA;
+            --negro: #050C18;
+            --gris-oscuro: #0e1a2b;
+            --gris-card: #111e30;
+            --blanco: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--negro);
+            min-height: 100vh;
+            color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 65vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            background:
+                radial-gradient(ellipse at 20% 10%, rgba(21, 101, 192, 0.18) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 131, 143, 0.12) 0%, transparent 55%),
+                var(--negro);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231565C0' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .logo {
+            max-width: 180px;
+            width: 55%;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .badge {
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .badge-blue {
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
+            color: var(--blanco);
+        }
+
+        .badge-teal {
+            background: rgba(0, 131, 143, 0.2);
+            color: var(--teal-claro);
+            border: 1px solid rgba(0, 131, 143, 0.4);
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--azul-claro) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--teal-claro);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .fecha-lugar {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 1.75rem;
+            position: relative;
+        }
+
+        .fecha-lugar strong { color: var(--blanco); }
+
+        .description {
+            font-size: 1.05rem;
+            max-width: 680px;
+            opacity: 0.85;
+            margin-bottom: 2.25rem;
+            position: relative;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--blanco);
+            padding: 1rem 2.5rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 3.5rem 2rem;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .section-alt {
+            background: var(--gris-oscuro);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.75rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--azul-claro), var(--teal-claro));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== OBJETIVOS ===== */
+        .objetivos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .objetivo-item {
+            background: var(--gris-card);
+            padding: 1.25rem 1.5rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--azul-claro);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .objetivo-item .icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        /* ===== TEMAS ===== */
+        .temas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .tema-card {
+            background: rgba(21, 101, 192, 0.08);
+            border: 1px solid rgba(66, 165, 245, 0.15);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .tema-card .tema-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .tema-card strong {
+            display: block;
+            color: var(--azul-claro);
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        /* ===== PUBLICO ===== */
+        .publico-box {
+            background: rgba(0, 131, 143, 0.08);
+            border: 1px solid rgba(0, 131, 143, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .publico-box p { opacity: 0.9; margin-bottom: 1rem; font-size: 0.95rem; }
+
+        .publico-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+        }
+
+        .publico-tag {
+            background: rgba(0, 131, 143, 0.15);
+            border: 1px solid rgba(38, 198, 218, 0.3);
+            color: var(--teal-claro);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* ===== EVENTO INFO ===== */
+        .evento-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .evento-card {
+            background: var(--gris-card);
+            border-radius: 12px;
+            padding: 1.25rem 1.75rem;
+            text-align: center;
+            min-width: 180px;
+            flex: 1;
+            max-width: 220px;
+        }
+
+        .evento-card .ev-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+        .evento-card .ev-label { font-size: 0.75rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.06em; }
+        .evento-card .ev-value { font-size: 1rem; font-weight: 700; color: var(--azul-claro); margin-top: 0.2rem; }
+
+        /* ===== CTA FINAL ===== */
+        .cta-final {
+            background: linear-gradient(135deg, rgba(21, 101, 192, 0.15) 0%, rgba(0, 131, 143, 0.1) 100%);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cta-final h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: none;
+            -webkit-text-fill-color: var(--blanco);
+            color: var(--blanco);
+        }
+
+        .cta-final p { margin-bottom: 2rem; opacity: 0.8; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gris-oscuro);
+            font-size: 0.85rem;
+            opacity: 0.65;
+        }
+
+        footer a { color: var(--azul-claro); text-decoration: none; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.9rem; }
+            .subtitle { font-size: 1rem; }
+            .description { font-size: 0.95rem; }
+            .section { padding: 2.5rem 1.5rem; }
+            .evento-card { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="../assets/logo.png" alt="SimAcademy Logo" class="logo">
+
+        <div class="badge-row">
+            <span class="badge badge-blue">Webinar Exclusivo</span>
+            <span class="badge badge-teal">Colegio de Ortopedistas de Pie de México</span>
+        </div>
+
+        <h1>IA en Ortopedia del Pie</h1>
+        <p class="subtitle">Inteligencia Artificial aplicada a la práctica clínica</p>
+
+        <p class="fecha-lugar">
+            📅 <strong>15 de junio 2026</strong> &nbsp;·&nbsp; 🖥️ <strong>Modalidad en línea</strong>
+        </p>
+
+        <p class="description">
+            Explora cómo la Inteligencia Artificial está transformando el diagnóstico, la planificación 
+            quirúrgica y la toma de decisiones clínicas en ortopedia del pie. Un webinar diseñado 
+            para especialistas que quieren integrar estas herramientas en su práctica hoy.
+        </p>
+
+        <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20el%20webinar%20de%20IA%20en%20Ortopedia" class="cta-button">
+            💬 Registrarme al webinar
+        </a>
+    </section>
+
+    <!-- DETALLES DEL EVENTO -->
+    <div class="section-alt">
+        <div class="section">
+            <h2>Detalles del Evento</h2>
+            <div class="evento-info">
+                <div class="evento-card">
+                    <span class="ev-icon">📅</span>
+                    <div class="ev-label">Fecha</div>
+                    <div class="ev-value">15 junio 2026</div>
+                </div>
+                <div class="evento-card">
+                    <span class="ev-icon">🕐</span>
+                    <div class="ev-label">Hora</div>
+                    <div class="ev-value">Por confirmar</div>
+                </div>
+                <div class="evento-card">
+                    <span class="ev-icon">🖥️</span>
+                    <div class="ev-label">Modalidad</div>
+                    <div class="ev-value">En línea (Zoom)</div>
+                </div>
+                <div class="evento-card">
+                    <span class="ev-icon">🎓</span>
+                    <div class="ev-label">Acceso</div>
+                    <div class="ev-value">Colegio COFPM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OBJETIVOS -->
+    <div class="section">
+        <h2>¿Qué aprenderás?</h2>
+        <div class="objetivos-grid">
+            <div class="objetivo-item">
+                <span class="icon">🔍</span>
+                <span>Fundamentos de IA aplicada al diagnóstico en ortopedia del pie</span>
+            </div>
+            <div class="objetivo-item">
+                <span class="icon">🦴</span>
+                <span>Herramientas de análisis de imagen médica con inteligencia artificial</span>
+            </div>
+            <div class="objetivo-item">
+                <span class="icon">📐</span>
+                <span>IA en planificación quirúrgica y análisis biomecánico</span>
+            </div>
+            <div class="objetivo-item">
+                <span class="icon">📊</span>
+                <span>Evidencia clínica actual y limitaciones del uso de IA en la especialidad</span>
+            </div>
+            <div class="objetivo-item">
+                <span class="icon">⚕️</span>
+                <span>Casos clínicos reales: de la teoría a la aplicación práctica</span>
+            </div>
+            <div class="objetivo-item">
+                <span class="icon">🚀</span>
+                <span>Cómo empezar a integrar IA en tu consulta y práctica diaria</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEMAS -->
+    <div class="section-alt">
+        <div class="section">
+            <h2>Temas del Webinar</h2>
+            <div class="temas-grid">
+                <div class="tema-card">
+                    <span class="tema-icon">🧠</span>
+                    <strong>IA y diagnóstico</strong>
+                    Modelos de visión computacional para radiografías y RMN del pie
+                </div>
+                <div class="tema-card">
+                    <span class="tema-icon">💻</span>
+                    <strong>Herramientas disponibles</strong>
+                    Software clínico con IA para el especialista en ortopedia
+                </div>
+                <div class="tema-card">
+                    <span class="tema-icon">🔬</span>
+                    <strong>Evidencia actual</strong>
+                    Estado del arte y publicaciones recientes en IA ortopédica
+                </div>
+                <div class="tema-card">
+                    <span class="tema-icon">⚠️</span>
+                    <strong>Ética y limitaciones</strong>
+                    Lo que la IA puede (y no puede) hacer en la toma de decisiones clínicas
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÚBLICO -->
+    <div class="section">
+        <h2>¿Para quién es este webinar?</h2>
+        <div class="publico-box">
+            <p>
+                Dirigido a especialistas y subespecialistas del aparato locomotor con 
+                interés en la innovación tecnológica aplicada a la práctica clínica.
+            </p>
+            <div class="publico-tags">
+                <span class="publico-tag">Ortopedistas</span>
+                <span class="publico-tag">Cirujanos de pie y tobillo</span>
+                <span class="publico-tag">Médicos en formación</span>
+                <span class="publico-tag">Radiólogos musculoesqueléticos</span>
+                <span class="publico-tag">Miembros del COFPM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <h2>Reserva tu lugar</h2>
+        <p>Cupo limitado. Regístrate para recibir el enlace y recordatorios del webinar.</p>
+        <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20el%20webinar%20de%20IA%20en%20Ortopedia%20del%20Pie%20-%2015%20junio" class="cta-button">
+            💬 Quiero registrarme
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 SimAcademy · <a href="https://www.simacademy.lat">www.simacademy.lat</a> · Evento en colaboración con el Colegio de Ortopedistas de Pie de México</p>
+    </footer>
+
+</body>
+</html>
