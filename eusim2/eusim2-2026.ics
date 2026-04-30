@@ -1,0 +1,90 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SimAcademy//EuSim Nivel 2 2026//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:EuSim Nivel 2 - SimAcademy 2026
+X-WR-TIMEZONE:America/Mexico_City
+X-WR-CALDESC:6 sesiones del curso EuSim Nivel 2 en Línea - SimAcademy
+BEGIN:VTIMEZONE
+TZID:America/Mexico_City
+BEGIN:STANDARD
+DTSTART:20251026T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20260405T020000
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:eusim2-s1-20260730@simacademy.lat
+DTSTAMP:20260430T180000Z
+DTSTART;TZID=America/Mexico_City:20260730T180000
+DTEND;TZID=America/Mexico_City:20260730T210000
+SUMMARY:EuSim Nivel 2 - Sesión 1: Psychological Safety
+DESCRIPTION:Primera sesión del curso EuSim Nivel 2 en Línea. Tópico: Psychological Safety - sentar las bases del grupo y la cohorte.\n\nMás información: https://info.simacademy.lat/eusim2/
+LOCATION:Online (link enviado por SimAcademy)
+URL:https://info.simacademy.lat/eusim2/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:eusim2-s2-20260806@simacademy.lat
+DTSTAMP:20260430T180000Z
+DTSTART;TZID=America/Mexico_City:20260806T180000
+DTEND;TZID=America/Mexico_City:20260806T210000
+SUMMARY:EuSim Nivel 2 - Sesión 2: Debriefing Review
+DESCRIPTION:Segunda sesión del curso EuSim Nivel 2 en Línea. Tópico: Debriefing Review - análisis crítico de tu práctica actual.\n\nMás información: https://info.simacademy.lat/eusim2/
+LOCATION:Online (link enviado por SimAcademy)
+URL:https://info.simacademy.lat/eusim2/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:eusim2-s3-20260813@simacademy.lat
+DTSTAMP:20260430T180000Z
+DTSTART;TZID=America/Mexico_City:20260813T180000
+DTEND;TZID=America/Mexico_City:20260813T210000
+SUMMARY:EuSim Nivel 2 - Sesión 3: Levels of Reflection + Questioning
+DESCRIPTION:Tercera sesión del curso EuSim Nivel 2 en Línea. Tópicos: Levels of Reflection + Questioning Techniques.\n\nMás información: https://info.simacademy.lat/eusim2/
+LOCATION:Online (link enviado por SimAcademy)
+URL:https://info.simacademy.lat/eusim2/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:eusim2-s4-20260827@simacademy.lat
+DTSTAMP:20260430T180000Z
+DTSTART;TZID=America/Mexico_City:20260827T180000
+DTEND;TZID=America/Mexico_City:20260827T210000
+SUMMARY:EuSim Nivel 2 - Sesión 4: Human Factors
+DESCRIPTION:Cuarta sesión del curso EuSim Nivel 2 en Línea. Tópico: Human Factors - integración de habilidades no técnicas.\n\nMás información: https://info.simacademy.lat/eusim2/
+LOCATION:Online (link enviado por SimAcademy)
+URL:https://info.simacademy.lat/eusim2/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:eusim2-s5-20260903@simacademy.lat
+DTSTAMP:20260430T180000Z
+DTSTART;TZID=America/Mexico_City:20260903T180000
+DTEND;TZID=America/Mexico_City:20260903T210000
+SUMMARY:EuSim Nivel 2 - Sesión 5: Feedback + Behavioral Types
+DESCRIPTION:Quinta sesión del curso EuSim Nivel 2 en Línea. Tópicos: Feedback + Behavioral Types - adapta tu estilo a cada aprendiz.\n\nMás información: https://info.simacademy.lat/eusim2/
+LOCATION:Online (link enviado por SimAcademy)
+URL:https://info.simacademy.lat/eusim2/
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:eusim2-s6-20260910@simacademy.lat
+DTSTAMP:20260430T180000Z
+DTSTART;TZID=America/Mexico_City:20260910T180000
+DTEND;TZID=America/Mexico_City:20260910T210000
+SUMMARY:EuSim Nivel 2 - Sesión 6: Difficult Debriefing
+DESCRIPTION:Sexta y última sesión del curso EuSim Nivel 2 en Línea. Tópico: Difficult Debriefing - el cierre y el caso más exigente.\n\nMás información: https://info.simacademy.lat/eusim2/
+LOCATION:Online (link enviado por SimAcademy)
+URL:https://info.simacademy.lat/eusim2/
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
