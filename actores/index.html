@@ -279,6 +279,10 @@
         @media (min-width: 760px) { .faculty-lead { grid-template-columns: repeat(2, 1fr); } }
         .faculty-card { background: var(--paper); border-radius: var(--r-md); padding: 1.75rem; border: 1px solid rgba(15,20,25,.06); }
         .faculty-card.lead { border-top: 4px solid var(--morado); }
+        .faculty-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 1rem; border: 3px solid var(--paper); box-shadow: 0 4px 14px rgba(15,20,25,.10); background: var(--gradient-soft); }
+        .faculty-photo.placeholder { display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; color: var(--morado); letter-spacing: -.02em; text-transform: uppercase; }
+        .faculty-card.lead { text-align: center; }
+        .faculty-card.lead p { text-align: left; }
         .faculty-card h3 { font-size: 1.125rem; margin-bottom: .25rem; }
         .faculty-credential { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--morado); background: var(--gradient-soft); padding: .25rem .65rem; border-radius: var(--r-sm); margin-bottom: .65rem; }
         .faculty-role { font-size: .8rem; font-weight: 600; color: var(--ink-500); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem; }
@@ -598,12 +602,15 @@
                 </div>
                 <div class="faculty-lead">
                     <div class="faculty-card lead">
+                        <img class="faculty-photo" src="../assets/img/faculty/veronica-toro.jpg" alt="Retrato de Verónica Toro Torres" width="120" height="120" loading="lazy">
                         <span class="faculty-credential">HumanizArte</span>
                         <h3>Verónica Toro Torres</h3>
-                        <p class="faculty-role">Coordinadora del curso</p>
-                        <p>Coordina la formación escénica y la mirada humanizada del programa. Lidera HumanizArte en el cruce entre artes vivas y educación en salud.</p>
+                        <p class="faculty-role">Coordinadora · Instructora en Simulación Clínica · HumanizArte</p>
+                        <p>Coordina la formación escénica y la mirada humanizada del programa. Lidera HumanizArte en el cruce entre artes vivas y educación en salud, e integra ese trabajo como instructora en simulación clínica.</p>
                     </div>
                     <div class="faculty-card lead">
+                        <!-- TODO: reemplazar placeholder por foto en ../assets/img/faculty/juan-manuel-fraga.jpg cuando esté disponible -->
+                        <div class="faculty-photo placeholder" aria-hidden="true">JMF</div>
                         <span class="faculty-credential">SimAcademy</span>
                         <h3>Dr. Juan Manuel Fraga</h3>
                         <p class="faculty-role">Debriefing y dirección académica</p>
