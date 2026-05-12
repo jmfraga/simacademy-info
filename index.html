@@ -3,171 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimAcademy - Educación en Simulación Clínica</title>
-    <meta name="description" content="SimAcademy - Líderes en educación y capacitación en simulación clínica para profesionales de la salud.">
+    <title>SimAcademy · Cursos y eventos abiertos</title>
+    <meta name="description" content="Educación en simulación clínica. Conoce los cursos y eventos abiertos al público de SimAcademy: EuSim Nivel 1 y 2, Formación de Actores en Simulación, Mindfulness en la Práctica Clínica.">
+
+    <link rel="canonical" href="https://info.simacademy.lat/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://info.simacademy.lat/">
+    <meta property="og:title" content="SimAcademy · Cursos y eventos abiertos">
+    <meta property="og:description" content="Educación en simulación clínica para profesionales de la salud. Próximas convocatorias: EuSim Nivel 2 (jul-sep), EuSim Nivel 1 (sep), Formación de Actores en Simulación (sep-oct) y más.">
+    <meta property="og:image" content="https://info.simacademy.lat/assets/logo.png">
+    <meta property="og:locale" content="es_MX">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SimAcademy · Cursos y eventos abiertos">
+    <meta name="twitter:description" content="Educación en simulación clínica. Cursos y eventos abiertos de SimAcademy.">
+    <meta name="twitter:image" content="https://info.simacademy.lat/assets/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --verde: #4CAF50;
             --verde-claro: #66BB6A;
             --morado: #7B3F9E;
+            --morado-claro: #9B5BBE;
             --morado-oscuro: #5E2D7A;
+            --gold: #D4A35E;
             --negro: #000000;
             --gris-oscuro: #1a1a1a;
+            --gris: #2a2a2a;
+            --gris-borde: rgba(255,255,255,0.08);
             --blanco: #ffffff;
         }
-        
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--negro);
-            min-height: 100vh;
             color: var(--blanco);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
         }
-        
+
+        a { color: inherit; }
+
         .hero {
-            min-height: 100vh;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(123, 63, 158, 0.18) 0%, transparent 55%),
+                radial-gradient(ellipse at 70% 80%, rgba(76, 175, 80, 0.12) 0%, transparent 55%),
+                var(--negro);
+            border-bottom: 1px solid var(--gris-borde);
+        }
+
+        .hero img.logo {
+            max-width: 240px;
+            width: 70%;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+            letter-spacing: -.01em;
+        }
+
+        .hero h1 .accent {
+            background: linear-gradient(135deg, var(--verde-claro), var(--morado-claro));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p.lead {
+            font-size: 1.05rem;
+            max-width: 640px;
+            margin: 0 auto;
+            opacity: .85;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .section-title {
+            font-size: .85rem;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: var(--verde-claro);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--gris-borde), transparent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid var(--gris-borde);
+            border-radius: 16px;
+            padding: 1.75rem;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            background: 
-                radial-gradient(ellipse at 30% 20%, rgba(123, 63, 158, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
-                var(--negro);
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .logo {
-            max-width: 320px;
-            width: 90%;
-            margin-bottom: 2rem;
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--verde), var(--morado));
+            opacity: .6;
         }
-        
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            color: var(--verde-claro);
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(123, 63, 158, 0.45);
+            box-shadow: 0 12px 32px rgba(0,0,0,.4);
         }
-        
-        .description {
-            font-size: 1.1rem;
-            max-width: 600px;
-            line-height: 1.6;
-            opacity: 0.85;
-            margin-bottom: 2.5rem;
-        }
-        
-        .cta-button {
+
+        .eyebrow {
             display: inline-block;
-            background: linear-gradient(135deg, var(--verde) 0%, var(--verde-claro) 100%);
-            color: var(--negro);
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: .75rem;
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: .75rem;
+        }
+
+        .card .meta {
+            font-size: .9rem;
+            color: var(--verde-claro);
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+
+        .card .modality {
+            font-size: .82rem;
+            opacity: .7;
+            margin-bottom: 1rem;
+        }
+
+        .card p.desc {
+            font-size: .95rem;
+            opacity: .85;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            color: var(--verde-claro);
+            font-weight: 600;
+            font-size: .95rem;
+            text-decoration: none;
+            border-top: 1px solid var(--gris-borde);
+            padding-top: 1rem;
+            transition: color .2s ease, gap .2s ease;
+        }
+
+        .card .cta:hover {
+            color: var(--blanco);
+            gap: .75rem;
+        }
+
+        .card .cta .arrow {
+            transition: transform .2s ease;
+        }
+
+        .card:hover .cta .arrow {
+            transform: translateX(3px);
+        }
+
+        .upcoming-note {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(123, 63, 158, 0.08);
+            border: 1px dashed rgba(123, 63, 158, 0.3);
+            border-radius: 12px;
+            text-align: center;
+            font-size: .95rem;
+            opacity: .9;
+        }
+
+        .upcoming-note a {
+            color: var(--verde-claro);
             font-weight: 600;
             text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
-        }
-        
-        .features {
-            display: flex;
-            gap: 2rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .feature {
-            background: rgba(255,255,255,0.05);
-            padding: 1.5rem;
-            border-radius: 12px;
-            max-width: 200px;
-            border: 1px solid rgba(123, 63, 158, 0.3);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .feature h3 {
-            color: var(--morado);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .feature p {
-            font-size: 0.85rem;
-            opacity: 0.7;
-        }
-        
+
         footer {
-            text-align: center;
-            padding: 2rem;
             background: var(--gris-oscuro);
-            font-size: 0.875rem;
-            opacity: 0.7;
+            padding: 2.5rem 1.5rem;
+            border-top: 1px solid var(--gris-borde);
         }
-        
-        footer a {
-            color: var(--verde-claro);
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: .875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            opacity: .8;
+        }
+
+        .footer-links a {
+            color: var(--blanco);
             text-decoration: none;
+            transition: color .2s;
         }
-        
+
+        .footer-links a:hover { color: var(--verde-claro); }
+
+        .social {
+            display: flex;
+            gap: .75rem;
+        }
+
+        .social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--gris-borde);
+            transition: background .2s, border-color .2s;
+        }
+
+        .social a:hover {
+            background: rgba(123, 63, 158, 0.25);
+            border-color: var(--morado-claro);
+        }
+
+        .social svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--blanco);
+        }
+
+        .copyright {
+            opacity: .6;
+            font-size: .8rem;
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gris-borde);
+        }
+
         @media (max-width: 600px) {
-            .tagline { font-size: 1.2rem; }
-            .description { font-size: 1rem; }
-            .features { gap: 1rem; }
-            .feature { max-width: 150px; padding: 1rem; }
+            .hero { padding: 3rem 1.25rem 2rem; }
+            .hero h1 { font-size: 1.45rem; }
+            .hero p.lead { font-size: .98rem; }
+            main { padding: 2.5rem 1.25rem 3rem; }
+            .card { padding: 1.5rem; }
+            .card h2 { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
     <section class="hero">
-        <img src="assets/logo.png" alt="SimAcademy Logo" class="logo">
-        
-        <p class="tagline">Educación en Simulación Clínica</p>
-        
-        <p class="description">
-            Formamos profesionales de la salud a través de metodologías innovadoras 
-            en simulación clínica. Cursos, talleres y certificaciones diseñados 
-            para elevar la calidad de la atención médica.
-        </p>
-        
-        <a href="https://www.simacademy.lat" class="cta-button">Visitar sitio principal</a>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🎓</div>
-                <h3>Cursos Certificados</h3>
-                <p>Programas avalados internacionalmente</p>
+        <img src="assets/logo.png" alt="SimAcademy" class="logo">
+        <h1>Educación en <span class="accent">simulación clínica</span></h1>
+        <p class="lead">Cursos y eventos abiertos para profesionales de la salud que quieren formar, facilitar y elevar la calidad de la educación clínica con simulación.</p>
+    </section>
+
+    <main>
+        <div class="section-title">Próximas convocatorias</div>
+
+        <div class="grid">
+
+            <article class="card">
+                <span class="eyebrow">Curso intensivo · En línea</span>
+                <h2>EuSim Nivel 2 en Línea 2026</h2>
+                <div class="meta">30 de julio – 10 de septiembre, 2026</div>
+                <div class="modality">6 sesiones online (jueves) + coaching 1:1 · Cupo limitado</div>
+                <p class="desc">Programa avanzado para instructores con experiencia previa que quieren llevar su facilitación al estándar internacional EuSim. Incluye una hora de coaching personal con experto internacional.</p>
+                <a href="/eusim2/" class="cta">Ver detalles <span class="arrow">→</span></a>
+            </article>
+
+            <article class="card">
+                <span class="eyebrow">Certificación internacional · Presencial</span>
+                <h2>EuSim Nivel 1 · Septiembre</h2>
+                <div class="meta">24 – 26 de septiembre, 2026</div>
+                <div class="modality">Presencial · Centro Médico ABC Campus Santa Fe, CDMX</div>
+                <p class="desc">Curso fundacional EuSim para iniciar como facilitador de simulación clínica. Tres días intensivos con profesorado internacional y certificación reconocida en Europa y Latinoamérica.</p>
+                <a href="/eusim1sep/" class="cta">Ver detalles <span class="arrow">→</span></a>
+            </article>
+
+            <article class="card">
+                <span class="eyebrow">Co-organizado con HumanizArte · Mixto</span>
+                <h2>Formación de Actores en Simulación Clínica</h2>
+                <div class="meta">29 de septiembre – 17 de octubre, 2026</div>
+                <div class="modality">54 horas · 4 sesiones Zoom + encuentro presencial CDMX (16-17 oct)</div>
+                <p class="desc">Programa bajo estándares ASPE e INACSL para formar Pacientes Simulados. Dirigido a profesionales de la salud y actores con interés en educación médica con simulación.</p>
+                <a href="/actores/" class="cta">Ver detalles <span class="arrow">→</span></a>
+            </article>
+
+            <article class="card">
+                <span class="eyebrow">Bienestar clínico · Fecha por definir</span>
+                <h2>Mindfulness en la Práctica Clínica</h2>
+                <div class="meta">Próximamente</div>
+                <div class="modality">Modalidad y fechas por confirmar</div>
+                <p class="desc">Herramientas prácticas de mindfulness para prevenir el desgaste profesional y fortalecer la presencia terapéutica. Reserva tu interés para recibir aviso cuando abramos inscripciones.</p>
+                <a href="/mindfulness1/" class="cta">Ver detalles <span class="arrow">→</span></a>
+            </article>
+
+        </div>
+
+        <div class="upcoming-note">
+            ¿Buscas un curso a medida para tu institución?
+            <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20conocer%20cursos%20a%20medida%20para%20mi%20institución">Escríbenos por WhatsApp</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="https://simacademy.emergencias.com.mx/oferta-educativa/cancelaciones" target="_blank" rel="noopener noreferrer">Política de cancelación</a>
+                <a href="https://www.simacademy.lat" target="_blank" rel="noopener noreferrer">simacademy.lat</a>
             </div>
-            <div class="feature">
-                <div class="feature-icon">🏥</div>
-                <h3>Simulación Clínica</h3>
-                <p>Escenarios realistas de alta fidelidad</p>
+            <div class="social" aria-label="Redes sociales SimAcademy">
+                <a href="https://www.instagram.com/simacademy.lat" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.62.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.62.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.23 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.21 8.77 2.2 12 2.2zm0 1.8c-3.17 0-3.5 0-4.74.07-1.07.05-1.65.23-2.04.38-.51.2-.88.44-1.26.82-.38.38-.62.75-.82 1.26-.15.39-.33.97-.38 2.04C2.7 9.5 2.7 9.83 2.7 12s0 2.5.06 3.74c.05 1.07.23 1.65.38 2.04.2.51.44.88.82 1.26.38.38.75.62 1.26.82.39.15.97.33 2.04.38 1.24.06 1.57.07 4.74.07s3.5 0 4.74-.07c1.07-.05 1.65-.23 2.04-.38.51-.2.88-.44 1.26-.82.38-.38.62-.75.82-1.26.15-.39.33-.97.38-2.04.06-1.24.07-1.57.07-4.74s0-3.5-.07-4.74c-.05-1.07-.23-1.65-.38-2.04a3.4 3.4 0 00-.82-1.26 3.4 3.4 0 00-1.26-.82c-.39-.15-.97-.33-2.04-.38C15.5 4 15.17 4 12 4zm0 3.06A4.94 4.94 0 1112 17a4.94 4.94 0 010-9.88zm0 1.8a3.14 3.14 0 100 6.28 3.14 3.14 0 000-6.28zm5.16-1.95a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/simacademy-latam/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.01-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                </a>
             </div>
-            <div class="feature">
-                <div class="feature-icon">👥</div>
-                <h3>Instructores Expertos</h3>
-                <p>Profesionales con experiencia internacional</p>
+            <div class="copyright">
+                © 2026 SimAcademy · Educación en simulación clínica
             </div>
         </div>
-    </section>
-    
-    <footer>
-        <p>© 2026 SimAcademy · <a href="https://www.simacademy.lat">www.simacademy.lat</a></p>
     </footer>
 </body>
 </html>
