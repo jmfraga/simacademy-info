@@ -292,6 +292,15 @@
         .faculty-text { text-align: left; }
         @media (max-width: 599px) { .faculty-text { text-align: center; } .faculty-text .faculty-credential { margin-top: 0; } }
 
+        /* === PARTNERS === */
+        .partners { background: var(--surface); }
+        .partners .container { text-align: center; }
+        .partners-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; margin: 1.25rem 0 1.5rem; }
+        .partners-logo { max-width: 240px; width: 100%; height: auto; display: block; opacity: .92; transition: opacity 200ms var(--ease); }
+        .partners-logo:hover { opacity: 1; }
+        @media (min-width: 600px) { .partners-logo { max-width: 260px; } }
+        .partners-note { max-width: 620px; margin: 0 auto; font-size: .95rem; color: var(--ink-500); line-height: 1.65; }
+
         /* === PRICING === */
         .pricing { background: var(--gradient-soft); }
         .pricing-card { max-width: 680px; margin: 0 auto; background: var(--surface); border-radius: var(--r-lg); padding: 2.5rem; text-align: center; box-shadow: var(--shadow-md); border: 2px solid var(--morado); position: relative; }
@@ -659,6 +668,20 @@
                         <p>Participante del Hackathon Opus 4.7 2026 de Anthropic, con uso diario y hands-on de Claude Code en producción. Mantiene una línea de investigación activa en aplicaciones educativas y clínicas de IA en salud, que alimenta directamente los casos, prompts y flujos que se trabajan en este curso.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- PARTNERS -->
+        <section class="section partners reveal" aria-labelledby="partners-title">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-eyebrow">En colaboración con</span>
+                    <h2 id="partners-title">Aliados académicos</h2>
+                </div>
+                <div class="partners-logos">
+                    <img class="partners-logo" src="../assets/img/brands/cqms-horizontal.png" alt="Clúster Queretano Médico y de Salud" width="260" height="173" loading="lazy">
+                </div>
+                <p class="partners-note">Este curso se ofrece en colaboración académica con el <strong>Clúster Queretano Médico y de Salud (CQMS)</strong>. Los miembros activos del Clúster acceden a una tarifa preferente del 15% sobre la inversión general.</p>
             </div>
         </section>
 
