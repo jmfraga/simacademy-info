@@ -297,6 +297,15 @@
         .faculty-text { text-align: left; }
         @media (max-width: 599px) { .faculty-text { text-align: center; } .faculty-text .faculty-credential { margin-top: 0; } }
 
+        /* === PARTNERS === */
+        .partners { background: var(--surface); }
+        .partners .container { text-align: center; }
+        .partners-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; margin: 1.25rem 0 1.5rem; }
+        .partners-logo { max-width: 240px; width: 100%; height: auto; display: block; opacity: .92; transition: opacity 200ms var(--ease); }
+        .partners-logo:hover { opacity: 1; }
+        @media (min-width: 600px) { .partners-logo { max-width: 260px; } }
+        .partners-note { max-width: 640px; margin: 0 auto; font-size: .95rem; color: var(--ink-500); line-height: 1.65; }
+
         /* === PRICING === */
         .pricing { background: var(--gradient-soft); }
         .pricing-card { max-width: 680px; margin: 0 auto; background: var(--surface); border-radius: var(--r-lg); padding: 2.5rem; text-align: center; box-shadow: var(--shadow-md); border: 2px solid var(--morado); position: relative; }
@@ -720,6 +729,21 @@
                         <p>Línea de investigación activa en aplicaciones educativas y clínicas de inteligencia artificial en salud (ecosistema OpenClaw, MedExpert, Health Companion). Esa investigación alimenta directamente los casos, prompts y flujos que se trabajan durante la Fase 3 del curso.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- TODO: actualizar [PENDIENTE] con el No. de aprobación FLASIC cuando llegue (igual aplica a has-magia y actores que actualmente dicen 2026.01) -->
+        <!-- PARTNERS / AVALES -->
+        <section class="section partners reveal" aria-labelledby="partners-title">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-eyebrow">Aval académico</span>
+                    <h2 id="partners-title">Aliados académicos</h2>
+                </div>
+                <div class="partners-logos">
+                    <img class="partners-logo" src="../assets/img/brands/flasic.png" alt="FLASIC — Federación Latinoamericana de Asociaciones de Simulación Clínica" width="240" height="62" loading="lazy">
+                </div>
+                <p class="partners-note">Este curso está <strong>avalado por FLASIC (Federación Latinoamericana de Asociaciones de Simulación Clínica) bajo el No. de aprobación <span class="flasic-approval-number">[PENDIENTE]</span></strong>. El aval refiere a la calidad y coherencia del diseño curricular del programa.</p>
             </div>
         </section>
 
