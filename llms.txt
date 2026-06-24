@@ -1,0 +1,23 @@
+# SimAcademy · Cursos de educación médica basada en simulación
+
+> SimAcademy es la academia mexicana de educación médica basada en simulación: formación de instructores, debriefing, paciente simulado, fidelidad y diseño de escenarios. Cursos presenciales en CDMX y online sincrónicos, con interpretación EN→ES y certificación internacional EuSim. Mismo precio dentro y fuera de México, IVA incluido.
+
+Dirigido a médicos, residentes, enfermería, paramédicos, educadores clínicos y directores de centros de simulación. Tono profesional, técnico-cálido, sin hype. Las páginas listadas aquí son las que tienen convocatoria vigente o referencia evergreen; se publican fechas por cohorte.
+
+## Cursos vivos
+
+- [Haz Magia con Claude · IA aplicada a salud](https://info.simacademy.lat/haz-magia-con-claude/): 36 horas, 100% en línea (16 jun – 21 jul 2026). Para profesionales de salud que quieren integrar Claude con criterio clínico. $4,060 MXN IVA incluido (≈$230 USD); tarifa CQMS $3,451 MXN (15% desc.). Avalado por FLASIC.
+- [EuSim Nivel 1 · Septiembre 2026](https://info.simacademy.lat/eusim1sep/): 3 días presenciales en CDMX (24–26 sep 2026). Tu primer paso como facilitador de simulación, con estándar internacional EuSim. $37,700 MXN IVA incluido (≈$2,150 USD), mismo precio dentro y fuera de México.
+- [EuSim Nivel 2 · Online](https://info.simacademy.lat/eusim2/): 6 sesiones sincrónicas + 1h de coaching 1:1 con experto EuSim internacional (30 jul – 10 sep 2026). Para instructores con ≥35 debriefings facilitados. $29,580 MXN IVA incluido (≈$1,690 USD).
+- [Formación de Actores en Simulación Clínica](https://info.simacademy.lat/actores/): 54 horas (presencial CDMX + online) en colaboración con HumanizArte (29 sep – 17 oct 2026). $6,960 MXN IVA incluido (≈$400 USD).
+- [Mindfulness Nivel 1](https://info.simacademy.lat/mindfulness1/): Programa para reducir burnout en profesionales de la salud. Inversión y fechas se publican por convocatoria.
+
+## Cursos de referencia (evergreen, sin cohorte específica)
+
+- [EuSim Nivel 1 · información general](https://info.simacademy.lat/eusim1/): Página de referencia del programa EuSim Nivel 1. Para cohorte vigente, ver la URL específica de septiembre 2026.
+- [Debriefing en Simulación](https://info.simacademy.lat/debriefing/): Curso sobre debriefing estructurado (PEARLS, GAS, advocacy-inquiry). $5,220 MXN IVA incluido (≈$300 USD) por participante. Descuentos institucionales caso por caso.
+
+## Otros recursos
+
+- [Blog SimAcademy](https://blog.simacademy.lat/): Posts sobre simulación clínica, debriefing, paciente simulado, fidelidad y diseño de escenarios.
+- [Sitio principal SimAcademy](https://www.simacademy.lat/): Información institucional, equipo, política de cancelación, recursos abiertos.
