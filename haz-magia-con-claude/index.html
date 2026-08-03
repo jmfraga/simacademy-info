@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haz Magia con Claude · Curso para dominar la IA de Anthropic con criterio · SimAcademy</title>
-    <meta name="description" content="Curso de 6 semanas para dominar la suite de Anthropic (Claude) con método y criterio. Tres tracks: clínico, educativo y general. 100% en línea. Próxima cohorte: fechas por confirmar.">
+    <meta name="description" content="Curso de 6 semanas para dominar la suite de Anthropic (Claude) con método y criterio. Tres tracks: clínico, educativo y general —no necesitas ser del sector salud. 100% en línea. $4,500 MXN IVA incluido. Próxima cohorte: fechas por confirmar.">
     <meta name="keywords" content="Claude, Anthropic, inteligencia artificial, prompting, IA generativa, curso de IA, IA en salud, educación médica continua, productividad con IA, SimAcademy">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://info.simacademy.lat/haz-magia-con-claude/">
@@ -52,7 +52,7 @@
         },
         {
           "@type": "Offer",
-          "name": "Miembros del Clúster (IVA incluido, 15% de descuento)",
+          "name": "Tarifa de grupo, 3 o más personas de la misma institución (IVA incluido, 15% de descuento)",
           "price": "3825.00",
           "priceCurrency": "MXN",
           "availability": "https://schema.org/PreOrder",
@@ -338,6 +338,43 @@
         .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; text-align: center; font-size: .8rem; color: rgba(255,255,255,.45); }
         .footer-bottom a { color: rgba(255,255,255,.65); }
 
+        /* === VIDEO === */
+        .vid { width: 100%; aspect-ratio: 16/9; border-radius: var(--r-md); background: #0b0b0b; display: block; box-shadow: var(--shadow-md); }
+        .vid-caption { font-size: .78rem; color: var(--ink-500); margin-top: .5rem; line-height: 1.5; }
+
+        /* Video de objeción, dentro de "¿Para quién es?" */
+        .objection-video { max-width: 720px; margin: 2rem auto 0; text-align: center; }
+        .objection-video h3 { font-size: 1.125rem; margin-bottom: .25rem; }
+        .objection-video > p { font-size: .9rem; color: var(--ink-500); margin-bottom: 1rem; }
+
+        /* === TESTIMONIOS === */
+        .testimonials { background: var(--gradient-soft); }
+        .testi-hero { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 1060px; margin: 0 auto 1.5rem; background: var(--surface); border-radius: var(--r-lg); padding: 1.5rem; box-shadow: var(--shadow-md); border-top: 4px solid var(--accent-gold); align-items: center; }
+        @media (min-width: 860px) { .testi-hero { grid-template-columns: 1.15fr 1fr; gap: 2rem; padding: 2rem; } }
+        .testi-hero blockquote { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.125rem, 2.2vw, 1.5rem); line-height: 1.4; color: var(--ink-900); margin-bottom: 1rem; }
+        .testi-hero blockquote mark { background: var(--accent-gold-soft); padding: 0 .15em; border-radius: 3px; }
+        .testi-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 1060px; margin: 0 auto; }
+        @media (min-width: 760px) { .testi-grid { grid-template-columns: repeat(2, 1fr); } }
+        .testi-card { background: var(--surface); border-radius: var(--r-lg); padding: 1.5rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(15,20,25,.06); display: flex; flex-direction: column; }
+        .testi-card blockquote { font-size: 1rem; line-height: 1.6; color: var(--ink-700); margin: 1rem 0; font-style: italic; }
+        .testi-who { display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; margin-top: auto; padding-top: .5rem; border-top: 1px solid rgba(15,20,25,.08); }
+        .testi-name { font-weight: 700; font-size: .95rem; color: var(--ink-900); }
+        .testi-role { font-size: .8rem; color: var(--ink-500); }
+        .testi-nps { display: inline-flex; align-items: center; gap: .3rem; font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--verde-deep); background: rgba(76,175,80,.12); padding: .2rem .55rem; border-radius: var(--r-pill); }
+        .testi-note { max-width: 760px; margin: 1.75rem auto 0; text-align: center; font-size: .82rem; color: var(--ink-500); line-height: 1.6; }
+
+        /* === REQUISITOS / AVISO PRO === */
+        .prereq-alert { background: #FFF8EC; border: 1px solid rgba(212,163,94,.55); border-left: 4px solid var(--accent-gold); border-radius: var(--r-sm); padding: 1rem 1.15rem; margin-top: 1rem; font-size: .875rem; color: var(--ink-700); text-align: left; line-height: 1.6; }
+        .prereq-alert strong { color: var(--ink-900); }
+        .prereq-alert p + p { margin-top: .65rem; }
+
+        /* === DESCUENTOS === */
+        .discounts { margin-top: 1.25rem; padding: 1.15rem 1.25rem; background: var(--paper); border: 1px dashed rgba(123,63,158,.35); border-radius: var(--r-md); text-align: left; }
+        .discounts h4 { font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--morado); margin-bottom: .6rem; }
+        .discounts ul { list-style: none; padding: 0; }
+        .discounts li { font-size: .9rem; color: var(--ink-700); padding: .3rem 0 .3rem 1.5rem; position: relative; line-height: 1.55; }
+        .discounts li::before { content: '→'; position: absolute; left: 0; color: var(--morado); font-weight: 700; }
+
         /* === REVEAL === */
         .reveal { opacity: 0; transform: translateY(16px); transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
         .reveal.in-view { opacity: 1; transform: translateY(0); }
@@ -362,6 +399,7 @@
                 <a href="#curso">El curso</a>
                 <a href="#programa">Programa</a>
                 <a href="#modalidad">Modalidad</a>
+                <a href="#testimonios">Testimonios</a>
                 <a href="#facilitador">Facilitador</a>
                 <a href="#faq">FAQ</a>
             </div>
@@ -377,12 +415,12 @@
                 <div class="hero-brand">
                     <img src="../assets/logo.png" alt="SimAcademy">
                 </div>
-                <span class="badge"><span class="badge-dot"></span>Curso · Educación continua</span>
+                <span class="badge"><span class="badge-dot"></span>Segunda cohorte · Educación continua</span>
                 <h1>
                     <span class="line">Haz magia con Claude.</span>
                     <span class="line"><span class="highlight">Pero con criterio.</span></span>
                 </h1>
-                <p class="hero-sub">Un curso de seis semanas para dominar la suite de Anthropic con método y rigor. Con tres tracks —clínico, educativo y general— para que cada quien lo aplique a su propio trabajo.</p>
+                <p class="hero-sub">Un curso de seis semanas para dominar la suite de Anthropic con método y rigor. Tres tracks —clínico, educativo y general— para que cada quien lo aplique a su propio trabajo. <strong>No necesitas ser del sector salud</strong> ni saber programar.</p>
                 <div class="hero-cta">
                     <a href="#inscripcion" class="btn btn-primary">Quiero mi lugar →</a>
                     <a href="https://wa.me/524422184424?text=Hola%2C%20me%20interesa%20el%20curso%20Haz%20Magia%20con%20Claude.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-secondary" aria-label="Contactar por WhatsApp">
@@ -475,7 +513,7 @@
                     <article class="audience-card general">
                         <span class="audience-tag">Track general</span>
                         <h3>Profesionales de cualquier área</h3>
-                        <p class="audience-who">Administración y gestión · Investigación y academia · Emprendedores y equipos de producto · Comunicación, marketing y creativos · Cualquiera que quiera dominar Claude con método.</p>
+                        <p class="audience-who">Administración y gestión · Marketing y comunicación · Ingeniería, TI y datos · Investigación y academia · Emprendedores y equipos de producto · Cualquier persona —dentro o fuera del sector salud— que quiera dominar Claude con método.</p>
                         <div class="audience-block">
                             <h4>Puntos de dolor que vamos a tocar</h4>
                             <ul>
@@ -497,7 +535,17 @@
                         </div>
                     </article>
                 </div>
-                <p class="audience-disclaimer">No es un curso de programación. No requieres conocimientos técnicos previos de IA. Solo computadora con cámara, internet estable y disposición a practicar.</p>
+                <p class="audience-disclaimer">No es un curso de programación. No requieres conocimientos técnicos previos de IA ni pertenecer al sector salud. Los ejemplos del curso tienen origen sanitario —es de donde venimos— pero el método y los entregables los adaptas a tu propia área. Solo necesitas computadora con cámara, internet estable y disposición a practicar.</p>
+                <div class="objection-video">
+                    <h3>«Yo no soy programador»</h3>
+                    <p>La objeción número uno, contestada por el facilitador en 17 segundos.</p>
+                    <video class="vid" controls preload="none" playsinline poster="../assets/video/hmc/06-no-soy-programador.jpg">
+                        <source src="../assets/video/hmc/06-no-soy-programador.mp4" type="video/mp4">
+                        <track kind="captions" srclang="es" label="Español" src="../assets/video/hmc/06-no-soy-programador.vtt" default>
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                    <p class="vid-caption">Dr. Juan Manuel Fraga · Cohorte 1 de «Haz Magia con Claude» (2026)</p>
+                </div>
             </div>
         </section>
 
@@ -570,7 +618,7 @@
                         <span class="week-num">2</span>
                         <summary><span><span class="week-pre">Semana 2 · Projects</span>Tu cerebro externo</span></summary>
                         <div class="week-body">
-                            <p>Construcción de Projects con knowledge base y system prompt. Casos prácticos según tu track: guía clínica personal, banco de material docente o asistente experto de tu área. Desde esta semana recomendamos contar con Claude Pro (~20 USD/mes, no incluida) para aprovechar Projects y Artifacts a fondo; no es indispensable.</p>
+                            <p>Construcción de Projects con knowledge base y system prompt. Casos prácticos según tu track: guía clínica personal, banco de material docente o asistente experto de tu área. Desde esta semana es <strong>muy recomendable</strong> contar con Claude Pro (≈20 USD/mes, no incluida) para aprovechar Projects y Artifacts a fondo. No es obligatorio: quien no lo tenga trabaja en pareja con alguien que sí.</p>
                             <div class="week-outcome"><strong>Resultado</strong><span>Diseñas y operas un Project funcional para un caso real de tu trabajo.</span></div>
                         </div>
                     </details>
@@ -665,6 +713,67 @@
             </div>
         </section>
 
+        <!-- TESTIMONIOS -->
+        <section class="section testimonials reveal" id="testimonios" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-eyebrow">Cohorte 1 · 2026</span>
+                    <h2 id="testimonials-title">Lo que dicen quienes ya lo tomaron</h2>
+                    <p>Tres países, tres áreas distintas, la misma cohorte. Estos son fragmentos reales de las sesiones y de la encuesta de salida.</p>
+                </div>
+
+                <div class="testi-hero">
+                    <div>
+                        <video class="vid" controls preload="none" playsinline poster="../assets/video/hmc/20-saldana-a-las-dos-de-la-manana.jpg">
+                            <source src="../assets/video/hmc/20-saldana-a-las-dos-de-la-manana.mp4" type="video/mp4">
+                            <track kind="captions" srclang="es" label="Español" src="../assets/video/hmc/20-saldana-a-las-dos-de-la-manana.vtt" default>
+                            Tu navegador no puede reproducir este video.
+                        </video>
+                    </div>
+                    <div>
+                        <blockquote>«Me da cosas que quizás a mí se me estaban pasando por alto. <mark>Reviso el calcio: yo me había olvidado de revisar el calcio.</mark> A las dos de la mañana ya no trabajas igual que en la mañana.»</blockquote>
+                        <div class="testi-who">
+                            <span class="testi-name">Jhan Carlos Saldaña</span>
+                            <span class="testi-role">Medicina intensiva · Perú</span>
+                            <span class="testi-nps">NPS 10</span>
+                        </div>
+                        <p class="vid-caption" style="margin-top:.75rem;">En la encuesta de salida escribió: «Actividad dinámica, se aprende haciendo».</p>
+                    </div>
+                </div>
+
+                <div class="testi-grid">
+                    <article class="testi-card">
+                        <video class="vid" controls preload="none" playsinline poster="../assets/video/hmc/16-hajdinjak-no-me-lo-esperaba.jpg">
+                            <source src="../assets/video/hmc/16-hajdinjak-no-me-lo-esperaba.mp4" type="video/mp4">
+                            <track kind="captions" srclang="es" label="Español" src="../assets/video/hmc/16-hajdinjak-no-me-lo-esperaba.vtt" default>
+                            Tu navegador no puede reproducir este video.
+                        </video>
+                        <blockquote>«Me gustó la dinámica de los encuentros, donde primero se hacía una demostración y luego podíamos trabajar en grupos pequeños.»</blockquote>
+                        <div class="testi-who">
+                            <span class="testi-name">Celina Hajdinjak</span>
+                            <span class="testi-role">Simulación clínica · Argentina</span>
+                            <span class="testi-nps">NPS 10</span>
+                        </div>
+                    </article>
+                    <article class="testi-card">
+                        <video class="vid" controls preload="none" playsinline poster="../assets/video/hmc/17-palacios-nunca-se-me-hubiera-ocurrido.jpg">
+                            <source src="../assets/video/hmc/17-palacios-nunca-se-me-hubiera-ocurrido.mp4" type="video/mp4">
+                            <track kind="captions" srclang="es" label="Español" src="../assets/video/hmc/17-palacios-nunca-se-me-hubiera-ocurrido.vtt" default>
+                            Tu navegador no puede reproducir este video.
+                        </video>
+                        <blockquote>«Los ejercicios prácticos y aplicables a mis actividades diarias laborales.»</blockquote>
+                        <div class="testi-who">
+                            <span class="testi-name">Fernando Palacios</span>
+                            <span class="testi-role">Salud ocupacional · México</span>
+                            <span class="testi-nps">NPS 9</span>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="testi-note">Fragmentos de las sesiones grabadas de la cohorte 1 y de la encuesta de salida. Los tres participantes autorizaron por escrito el uso de su nombre, imagen y voz.</p>
+            </div>
+        </section>
+
         <!-- PARTNERS -->
         <section class="section partners reveal" aria-labelledby="partners-title">
             <div class="container">
@@ -673,10 +782,9 @@
                     <h2 id="partners-title">Aliados académicos</h2>
                 </div>
                 <div class="partners-logos">
-                    <img class="partners-logo" src="../assets/img/brands/cqms-horizontal.png" alt="Clúster Queretano Médico y de Salud" width="260" height="173" loading="lazy">
                     <img class="partners-logo" src="../assets/img/brands/flasic.png" alt="FLASIC — Federación Latinoamericana de Asociaciones de Simulación Clínica" width="180" height="148" loading="lazy">
                 </div>
-                <p class="partners-note">Este curso se ofrece en colaboración académica con el <strong>Clúster Queretano Médico y de Salud (CQMS)</strong> y está <strong>avalado por FLASIC bajo el No. de aprobación 2026.01</strong>. Los miembros activos del Clúster acceden a una tarifa preferente del 15% sobre la inversión general, sin importar el track que elijan.</p>
+                <p class="partners-note">Curso <strong>avalado por FLASIC</strong> —Federación Latinoamericana de Asociaciones de Simulación Clínica— bajo el <strong>No. de aprobación 2026.01</strong>.</p>
             </div>
         </section>
 
@@ -691,14 +799,16 @@
                 <div class="pricing-card">
                     <div class="pricing-tiers">
                         <div class="tier">
-                            <div class="tier-label">General</div>
+                            <div class="tier-label">Individual</div>
                             <div class="tier-amount">$4,500 <span style="font-size: .55em;">MXN</span></div>
                             <div class="tier-currency">IVA incluido · ≈$255 USD aprox.</div>
+                            <div class="tier-foot">Mismo precio dentro y fuera de México. Sin cargos extra al pagar.</div>
                         </div>
                         <div class="tier featured">
-                            <div class="tier-label">Miembros del Clúster</div>
+                            <div class="tier-label">En equipo · 3 o más</div>
                             <div class="tier-amount">$3,825 <span style="font-size: .55em;">MXN</span></div>
-                            <div class="tier-currency">IVA incluido · ≈$215 USD aprox. · 15% de descuento</div>
+                            <div class="tier-currency">por persona · IVA incluido · 15% de descuento</div>
+                            <div class="tier-foot">3 personas de la misma institución: $11,475 en vez de $13,500.</div>
                         </div>
                     </div>
                     <ul class="pricing-includes">
@@ -710,8 +820,17 @@
                         <li>Guía de manejo responsable de información sensible (incl. PHI para clínicos)</li>
                         <li>Constancia de aprovechamiento (36 h) al cumplir criterios</li>
                     </ul>
-                    <div class="pricing-prereq">
-                        <strong>Recomendado a partir de la semana 2:</strong> contar con Claude Pro (≈20 USD/mes), deseable pero no indispensable. Los ejercicios básicos funcionan con el plan gratuito; algunos flujos avanzados (Projects con knowledge base, uso intensivo de Artifacts) aprovechan mejor la suscripción Pro. La suscripción la contrata cada participante por su cuenta y no está incluida en el costo del curso.
+                    <div class="discounts">
+                        <h4>Apoyos disponibles</h4>
+                        <ul>
+                            <li><strong>Ven en equipo (3 o más de la misma institución):</strong> además del 15% —$2,025 de ahorro para el grupo—, es la mejor forma de cursarlo. El proyecto final se evalúa en equipos de 2 o 3 perfiles distintos: quien llega con colegas trabaja sobre un problema real y común de su institución, se acompaña en la parte técnica y se lleva algo que puede implementar el lunes siguiente. <a href="https://wa.me/524422184424?text=Hola%2C%20somos%20un%20grupo%20y%20queremos%20la%20tarifa%20de%20equipo%20para%20Haz%20Magia%20con%20Claude." target="_blank" rel="noopener noreferrer" style="color: var(--morado); font-weight: 600;">Inscribe a tu equipo por WhatsApp</a>.</li>
+                            <li><strong>Becas:</strong> contamos con becas de cupo limitado para estudiantes y para personas que en este momento no tienen empleo. Se solicitan <a href="https://wa.me/524422184424?text=Hola%2C%20quiero%20solicitar%20una%20beca%20para%20el%20curso%20Haz%20Magia%20con%20Claude." target="_blank" rel="noopener noreferrer" style="color: var(--morado); font-weight: 600;">por WhatsApp</a> y se asignan por orden de solicitud. No pedimos comprobantes de ingresos: basta con que nos cuentes tu situación.</li>
+                        </ul>
+                    </div>
+                    <div class="prereq-alert">
+                        <p><strong>Muy recomendable: Claude Pro (≈20 USD/mes). No es obligatorio, pero léelo antes de inscribirte.</strong></p>
+                        <p>A partir de la semana 2 el curso saca mucho más provecho con Claude Pro: Projects con knowledge base, uso intensivo de Artifacts y los flujos de escritorio. Con el plan gratuito se puede seguir el curso, pero se alcanzan los límites de uso a mitad de sesión.</p>
+                        <p>Te lo decimos con todas sus letras porque en la cohorte 1 nos pasó: <em>la diferencia de herramientas dentro de los equipos frenó el trabajo del grupo entero.</em> Si no vas a contratar Pro, <strong>inscríbete sabiendo que vas a trabajar en pareja</strong> con alguien que sí lo tenga —nosotros te acompañamos a formar esa pareja al arrancar—. La suscripción la contrata cada participante por su cuenta y no está incluida en el precio del curso.</p>
                     </div>
                 </div>
             </div>
@@ -722,14 +841,15 @@
             <div class="container">
                 <div class="section-title">
                     <span class="section-eyebrow" style="color: var(--accent-gold);">Próxima cohorte</span>
-                    <h2 id="enroll-title">Aparta tu lugar</h2>
-                    <p>Cupo limitado a 30 personas. Estamos definiendo fechas y horario de la próxima cohorte. Déjanos tus datos por WhatsApp y te avisamos en cuanto se confirmen, con prioridad de lugar. Consulta la <a href="https://www.simacademy.lat/cancelaciones" target="_blank" rel="noopener noreferrer">política de cancelación</a>.</p>
+                    <h2 id="enroll-title">Entra a la lista de espera</h2>
+                    <p>Estamos cerrando fechas y horario de la segunda cohorte. Déjanos tus datos por WhatsApp y eres de las primeras personas en enterarte, con prioridad de lugar sobre el cupo de 30. La cohorte 1 se llenó. Consulta la <a href="https://www.simacademy.lat/cancelaciones" target="_blank" rel="noopener noreferrer">política de cancelación</a>.</p>
                 </div>
                 <div class="enroll-actions">
-                    <a href="https://wa.me/524422184424?text=Hola%2C%20quiero%20apartar%20mi%20lugar%20en%20el%20curso%20Haz%20Magia%20con%20Claude.%20Mi%20track%20de%20inter%C3%A9s%20es%20(cl%C3%ADnico%2Feducativo%2Fgeneral)%3A" class="btn btn-primary">Apartar mi lugar por WhatsApp</a>
-                    <a href="https://wa.me/524422184424?text=Hola%2C%20tengo%20preguntas%20sobre%20el%20curso%20Haz%20Magia%20con%20Claude." class="btn btn-secondary">Tengo preguntas</a>
+                    <a href="https://wa.me/524422184424?text=Hola%2C%20quiero%20entrar%20a%20la%20lista%20de%20espera%20del%20curso%20Haz%20Magia%20con%20Claude.%20Mi%20track%20de%20inter%C3%A9s%20es%20(cl%C3%ADnico%2Feducativo%2Fgeneral)%3A" class="btn btn-primary">Avísenme cuando abra</a>
+                    <a href="https://wa.me/524422184424?text=Hola%2C%20somos%20un%20grupo%20y%20queremos%20la%20tarifa%20de%20equipo%20para%20Haz%20Magia%20con%20Claude." class="btn btn-secondary">Venimos en equipo</a>
                 </div>
                 <div class="enroll-meta">
+                    <span><strong>Inversión:</strong> $4,500 MXN IVA incluido · $3,825 en equipo</span>
                     <span><strong>Cupo:</strong> mínimo 12 · máximo 30</span>
                     <span><strong>Modalidad:</strong> 100% en línea (Zoom + Moodle)</span>
                     <span><strong>Duración:</strong> 6 semanas · 36 h</span>
@@ -760,7 +880,8 @@
                     </details>
                     <details class="faq-item">
                         <summary>¿Qué versión de Claude usaremos? ¿Necesito comprar plan Pro?</summary>
-                        <p>Usamos la suite completa de Anthropic: Claude.ai, Projects, Artifacts/Skills, Claude Desktop y nociones de Claude Code. <strong>Recomendamos contar con Claude Pro</strong> (~20 USD/mes) <strong>a partir de la semana 2</strong> para aprovechar al máximo Projects y Artifacts. <strong>No es indispensable</strong>: los ejercicios básicos funcionan con el plan gratuito, aunque algunos flujos avanzados requieren Pro. Esa suscripción la contrata cada participante por su cuenta y no está incluida en el costo del curso.</p>
+                        <p>Usamos la suite completa de Anthropic: Claude.ai, Projects, Artifacts/Skills, Claude Desktop y nociones de Claude Code. <strong>Claude Pro (≈20 USD/mes) es muy recomendable a partir de la semana 2, aunque no es obligatorio.</strong></p>
+                        <p>Preferimos ser claros: en la cohorte 1, la diferencia de herramientas dentro de un mismo equipo frenó el avance del grupo. Con el plan gratuito puedes seguir el curso, pero vas a topar con los límites de uso a mitad de sesión y algunos flujos avanzados no los vas a poder correr por tu cuenta. <strong>Si no vas a contratar Pro, cuenta con que trabajarás en pareja</strong> con alguien que sí lo tenga; te ayudamos a formar esa pareja desde la primera sesión. La suscripción la contrata cada participante y no está incluida en el costo del curso.</p>
                     </details>
                     <details class="faq-item">
                         <summary>¿El certificado tiene validez curricular?</summary>
@@ -775,8 +896,12 @@
                         <p>Las seis sesiones se graban y se publican en Moodle dentro de 24 horas. Para acreditar el curso se requiere asistencia a <strong>al menos 5 de 6 sesiones</strong> (con grabación de respaldo válida para una ausencia justificada). Recomendamos asistir en vivo: la mayor parte del valor está en la práctica deliberada con coaching en tiempo real.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>¿Cómo aplica el descuento del Clúster?</summary>
-                        <p>El descuento del 15% aplica para miembros vigentes del <strong>Clúster Queretano Médico y de Salud A.C. (CQMS)</strong>, sin importar el track que elijas: <strong>$3,825 MXN</strong> (IVA incluido, ≈$215 USD) en lugar de <strong>$4,500 MXN</strong> (IVA incluido, ≈$255 USD). El precio es el mismo dentro y fuera de México. Para aplicarlo, indica tu número de socio al inscribirte; nuestro equipo lo valida con el Clúster antes de confirmar el cupo. El descuento aplica para una inscripción por persona. Si tu institución quiere explorar un convenio grupal, escríbenos.</p>
+                        <summary>¿Hay descuentos o becas?</summary>
+                        <p>Sí, dos apoyos. <strong>15% de descuento para grupos</strong> de 3 o más personas de la misma institución: <strong>$3,825 MXN</strong> por persona en lugar de $4,500 (IVA incluido), es decir $11,475 por tres inscripciones en vez de $13,500. Es la manera que más recomendamos, y no solo por el precio: el proyecto final se evalúa en equipos de 2 o 3 perfiles distintos, así que llegar con colegas de tu institución significa trabajar sobre un problema común y acompañarse en la parte técnica. Y <strong>becas de cupo limitado para estudiantes y para personas que hoy no tienen empleo</strong>, que se asignan por orden de solicitud y no requieren comprobantes de ingresos. Los dos se gestionan <a href="https://wa.me/524422184424?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20descuentos%20de%20grupo%20o%20becas%20para%20Haz%20Magia%20con%20Claude." target="_blank" rel="noopener noreferrer">por WhatsApp</a>. El precio de lista es de $4,500 MXN con IVA incluido, el mismo dentro y fuera de México.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cuándo empieza la próxima cohorte?</summary>
+                        <p>Estamos cerrando fechas y horario. Si te interesa, <a href="https://wa.me/524422184424?text=Hola%2C%20quiero%20entrar%20a%20la%20lista%20de%20espera%20del%20curso%20Haz%20Magia%20con%20Claude." target="_blank" rel="noopener noreferrer">entra a la lista de espera por WhatsApp</a>: eres de las primeras personas en enterarte cuando se publique el calendario y tienes prioridad de lugar. El cupo es de 30 participantes y la cohorte 1 se llenó.</p>
                     </details>
                 </div>
             </div>
